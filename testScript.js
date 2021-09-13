@@ -34,7 +34,7 @@ describe('SampleContract',()=>{
             expect(buyer_2_Balance).to.equal(50);
         });
 
-        it('should fail incase sender doesnt have enough tokens', async() =>{
+        it('should fail incase sender does not have enough tokens', async() =>{
             const initial_Founder_Balance = await token.balanceOf(founder.address);
             await expect(token.connect(buyer_1).transfer(founder.address,1)
             ).to.be.revertedWith('Not Enough Tokens');
