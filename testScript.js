@@ -13,7 +13,7 @@ describe('SampleContract',()=>{
     });
 
     describe('Deployment', () => {
-        it('should set the right owner/founder of the token', async()=>{
+        it('should set the right founder of the token', async()=>{
             expect(await token.founder()).to.equal(founder.address);    
         });
         it('should assign the total supply of tokens to the founder', async() =>{
